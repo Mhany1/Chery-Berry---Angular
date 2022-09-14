@@ -9,6 +9,7 @@ import { ICategory } from '../SharedClasses&Interfaces/ICategory';
   providedIn: 'root',
 })
 export class ProductsService {
+  [x: string]: any;
   products: IProduct[] = [];
   _url: string = 'https://cherrynberry.herokuapp.com/api/products';
 

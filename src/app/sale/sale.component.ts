@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../products.service';
+import { Router } from '@angular/router';
+import { ProductsService } from '../Services/products.service';
+
+
 
 @Component({
   selector: 'app-sale',
@@ -8,12 +11,13 @@ import { ProductsService } from '../products.service';
 })
 export class SaleComponent implements OnInit {
 
-  constructor(private productsservive:ProductsService) { }
+  constructor(private productsservice: ProductsService,private router: Router) { }
    products:any[]=[]
   ngOnInit(): void {
-    this.productsservive.getProducts().subscribe(productsdata=>{
-      this.products=productsdata
-    })
+   this.productsservice.GetAllProducts().subscribe((productsdata) => {
+      this.products = productsdata;
+      console.log('products', this.products);
+    });
   }
 
 }

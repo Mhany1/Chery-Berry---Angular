@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   user: string | undefined;
   amount: number = 1;
 
-  constructor(private router:Router,private activatedRoute: ActivatedRoute,private productsService: ProductsService) { }
+  constructor(private productsservice: ProductsService,private router:Router,private activatedRoute: ActivatedRoute,private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params:ParamMap)=>{
@@ -23,6 +23,10 @@ export class SearchComponent implements OnInit {
         this.products = data
       })
     })
+    // this.productsservice.GetAllProducts().subscribe((productsdata) => {
+    //   this.products = productsdata;
+    //   console.log('products', this.products);
+    // });
   }
 
   

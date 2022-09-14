@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
   isActive = true;
 
   constructor(public router: Router,private productsService: ProductsService) {}
-
+   @ViewChild('search') searchbtn!:ElementRef
   ngAfterViewInit(): void {
     this.isLoggedIn = localStorage.getItem('User') != null;
   }
@@ -77,7 +77,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   SearchInProducts(searchVal: string) {
-    console.log('44fds')
-    this.router.navigate(['search',searchVal])
+      // console.log('44fds')
+      this.router.navigate(['search',searchVal])
+    
   }
 }

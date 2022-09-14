@@ -32,7 +32,7 @@
                         </tbody>
                         <tbody>
                             <tr>
-                                <td class="col-6">{{total}}جنيه</td>
+                                <td class="col-6">{{total}} جنيه</td>
                                 <th class="col-6">المجموع</th>
                             </tr>
                         </tbody>
@@ -67,7 +67,7 @@
                         </label>
                     </div>
                     <div class="check2" *ngIf="isVisible == 0">
-                        <form [formGroup]="registerationForm">
+                        <form [formGroup]="registerationForm"novalidate>
                             <div>
                                 <label for="id">رقم البطاقة <span style="color: red;">*</span></label><br>
                                 <input type="text" id="id" style="width: 100%;"
@@ -115,12 +115,13 @@
                         </form>
                     </div>
                 </div>
-                <button class="donOrderBTN" routerLink="confirm-order">تأكيد الطلب</button>
+                <button class="donOrderBTN" routerLink="confirm-order"
+                [disabled]="registerationForm.invalid" [class.btn-danger]="registerationForm.invalid">تأكيد الطلب</button>
             </div>
             <div class="col-lg-7 formDiv">
                 <h1 style="font-weight: bold;color: brown;">تفاصيل الفاتورة</h1>
                 <hr>
-                <form [formGroup]="registerationForm">
+                <form [formGroup]="registerationForm"novalidate>
                     <div class="row" style="display: flex;">
                         <div class="col">
                             <label for="">الاسم الاول<span style="color: red;">*</span></label>

@@ -4,7 +4,7 @@
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner h-50">
     <div class="carousel-item active">
-      <img src="../assets/MainPageBanners/1.jpg" class="d-block w-100 h-50" alt="...">
+      <img src="../assets/MainPageBanners/1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block ">
         <!-- <a href="/products" class="btn" id="btnproduct">تسوق الان</a> -->
       </div>
@@ -36,20 +36,11 @@
 <!-- //*********************************************************************// -->
 
 <!-- // الاكثر مبيعاً -->
-
-
-
-
-
-
-
 <h2 style="color:  #a51731; font-weight: bold;" class="text-center">الأكثر مبيعاً</h2>
-<br>
-<!-- <div class="container-fluid ">
+<div class="container-fluid ">
   <div class="row row-cols-1 row-cols-md-3 g-4 rowscr">
-
-    <div *ngFor="let pro of products" class="card  p-3 m-2 imgcart cardscr col-lg-2 col-6 " >
-          <img src="{{pro.Imgs[0]}}" class="card-img-top w-100 h-50 text-center   " >
+    <div *ngFor="let pro of products" class="card me-4 ms-3  imgcart cardscr col-lg-2 col-6 " >
+          <img src="{{pro.Imgs[0]}}" class="card-img-top w-100 h-50 text-center" (click)="goToDetails(pro._id)">
           <div class="card-body">
             <h5 class="card-title text-center bg-light p-1 m-1">{{pro.Name}}</h5>
            <div class="text-center">
@@ -59,16 +50,13 @@
                <i class="fas fa-star icon"></i>
                <i class="fas fa-star icon"></i>
            </div>
-            <p style="color:#a51731; font-weight: bold;   " class="card-text text-center m-2">EGP {{pro.Price}}</p>
+            <p style="color:#a51731; font-weight: bold;   " class="card-text text-center m-2">جنيه {{pro.Price}}</p>
             <button (click)="addProduct(pro)" *ngIf="pro.IsPreOrder" class="btncart2 ">احجز الان</button>
              <button (click)="addProduct(pro)" *ngIf="!pro.IsPreOrder" class="btncart">اضافه الي السلة  <i class="fas fa-cart-plus"></i></button>
-           
-           
-           
           </div>
         </div>
   </div>
-</div> -->
+</div>
 
 <!-- //*****************************************************************// -->
 
@@ -153,21 +141,18 @@
 <!-- //***************************************************//* -->
 
 <!-- // عروض اليوم  -->
-<h2 style="color:  #a51731; font-weight: bold;" class="text-center">المنتجات</h2>
-
+<h2 style="color:  #a51731; font-weight: bold;" class="text-center">أحدث المنتجات</h2>
 <div class="container-fluid ">
-  <div class="row  rowscr">
-
-      <div *ngFor="let pro of products" class="card  p-3 m-2 imgcart cardscr col-lg-2 col-6 " >
+  <div class="row rowscr">
+      <div *ngFor="let pro of products" class="card me-4 ms-3 imgcart cardscr col-lg-2 col-6 " >
           <img src="{{pro.Imgs[0]}}" class="card-img-top w-100 h-50 text-center" (click)="goToDetails(pro._id)">
           <div class="card-body">
             <h5 class="card-title text-center bg-light p-1 m-1">{{pro.Name}}</h5>
            <!-- <div class="text-center">
               <i class="fas fa-sack-dollar dollar"></i>
            </div> -->
-            <p style="color:#a51731; font-weight: bold;   " class="card-text text-center m-2 " ><i class="fab fa-searchengin dollar"></i> EGP {{pro.Price}}</p>
-            <button (click)="addProduct(pro)"  class="btncart">اضافه الي السلة  <i class="fas fa-cart-plus"></i></button>
-           
+            <p style="color:#a51731; font-weight: bold;   " class="card-text text-center m-2 " ><i class="fab fa-nfc-symbol dollar"></i> جنيه {{pro.Price}}</p>
+            <button (click)="addProduct(pro)" *ngIf="!pro.IsPreOrder" class="btncart2 ">احجز الان  <i class="fas fa-sheet-plastic"></i></button>
           </div>ِ
         </div>
   </div>

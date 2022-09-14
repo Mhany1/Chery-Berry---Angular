@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     //  } else {
     if ('cart' in localStorage) {
       this.cart = JSON.parse(localStorage.getItem('cart')!);
-      var exist = this.cart.find((itemm) => itemm._id == obj.item._id);
+      var exist = this.cart.find( i => i.item._id == obj.item._id);
       if (exist) {
         alert('This product is already added');
       } else {

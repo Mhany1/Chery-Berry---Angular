@@ -9,9 +9,9 @@
         
 
         <div class="container-fluid ">
-            <div class="row  rowscr">
+            <div  class="row  rowscr m-auto ">
 
-                <div *ngFor="let pro of products" class="card  p-3 m-2 imgcart cardscr col-lg-2 col-6 ">
+                <div *ngFor="let pro of products" class="card  p-3 m-2 imgcart cardscr col-lg-2 col-6 m-auto ">
                     <img src="{{pro.Imgs[0]}}" class="card-img-top w-100 h-50 text-center"
                         (click)="goToDetails(pro._id)">
                     <div class="card-body">
@@ -20,7 +20,7 @@
                     <i class="fas fa-sack-dollar dollar"></i>
                  </div> -->
                         <p style="color:#a51731; font-weight: bold;   " class="card-text text-center m-2 "><i
-                                class="fab fa-searchengin dollar"></i> EGP {{pro.Price}}</p>
+                                class="fab fa-searchengin dollar"></i> {{pro.Price}} جنيه</p>
                         <button (click)="addProduct(pro)" class="btncart">اضافه الي السلة <i
                                 class="fas fa-cart-plus"></i></button>
 

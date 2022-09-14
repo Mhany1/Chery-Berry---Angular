@@ -53,6 +53,7 @@ const routes: Routes = [
   {path:'offcanvas',component:OffCanvasComponent},
   {path:'product/:id',component:ProductDetailsComponent},
   {path:'search/:searchVal',component:SearchComponent},
+  // {path:'search',component:SearchComponent},
   {path:'category/:id',component:ProductfilterComponent},
   {path:'check-out/confirm-order',component:ConfirmComponent},
   {path:'',component:HomeComponent},

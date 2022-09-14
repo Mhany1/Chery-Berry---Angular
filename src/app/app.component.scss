@@ -229,3 +229,13 @@ color:  gray;
 .sala{
   color:  gray;
 }
+
+.smalltext{
+  font-size: 14px;
+}
+
+.searchborder:focus{
+  border-color: #f86580b7;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(149, 158, 148, 0.6);
+  outline: 0 none;
+}
