@@ -10,7 +10,7 @@ export class OrdersService {
 
   constructor(private http:HttpClient) { }
 
-  _url:string = 'https://cherrynberry.herokuapp.com/api/orders'
+  _url:string = 'https://fine-rose-cockroach-gown.cyclic.app/api/orders'
 
   GetAllOrders():Observable<IOrder[]>{
     return this.http.get<IOrder[]>(this._url).pipe(catchError((err)=>{

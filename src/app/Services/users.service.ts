@@ -12,7 +12,7 @@ export class UsersService {
 
   public isAuth:boolean = false;
 
-  _url:string = 'https://cherrynberry.herokuapp.com/api/users'
+  _url:string = 'https://fine-rose-cockroach-gown.cyclic.app/api/users'
 
   GetAllUsers():Observable<IUser[]>{
     return this.http.get<IUser[]>(this._url).pipe(catchError((err)=>{

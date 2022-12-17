@@ -11,7 +11,7 @@ import { ICategory } from '../SharedClasses&Interfaces/ICategory';
 export class ProductsService {
   [x: string]: any;
   products: IProduct[] = [];
-  _url: string = 'https://cherrynberry.herokuapp.com/api/products';
+  _url: string = 'https://fine-rose-cockroach-gown.cyclic.app/api/products';
 
   constructor(private http: HttpClient) {}
 
@@ -36,7 +36,7 @@ export class ProductsService {
     );
   }
 
-  _reviews_url: string = 'https://cherrynberry.herokuapp.com/api/reviews';
+  _reviews_url: string = 'https://fine-rose-cockroach-gown.cyclic.app/api/reviews';
 
   GetAllReviews(): Observable<IReview[]> {
     return this.http.get<IReview[]>(this._reviews_url).pipe(
@@ -46,7 +46,7 @@ export class ProductsService {
     );
   }
 
-  _categories_url: string = 'https://cherrynberry.herokuapp.com/api/categories';
+  _categories_url: string = 'https://fine-rose-cockroach-gown.cyclic.app/api/categories';
 
   GetAllCategories(): Observable<ICategory[]> {
     return this.http.get<ICategory[]>(this._categories_url).pipe(
